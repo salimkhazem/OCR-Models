@@ -393,5 +393,15 @@ If you use this library in your research, please cite the original models:
   journal={arXiv preprint arXiv:2510.18234},
   year={2025}
 }
+
+@misc{nassar2025smoldoclingultracompactvisionlanguagemodel,
+      title={SmolDocling: An ultra-compact vision-language model for end-to-end multi-modal document conversion}, 
+      author={Ahmed Nassar and Andres Marafioti and Matteo Omenetti and Maksym Lysak and Nikolaos Livathinos and Christoph Auer and Lucas Morin and Rafael Teixeira de Lima and Yusik Kim and A. Said Gurbuz and Michele Dolfi and Miquel Farré and Peter W. J. Staar},
+      year={2025},
+      eprint={2503.11576},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2503.11576}, 
+}
 ```
 
