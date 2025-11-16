@@ -1,4 +1,4 @@
-"""Output type definitions."""
+"""Output type definitions """
 
 from typing import Any, Dict, Optional
 
