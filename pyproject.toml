@@ -1,0 +1,55 @@
+[project]
+name = "deepseek-ocr"
+version = "0.1.0"
+description = "Modular OCR library supporting DeepSeek-OCR, SmolDocling, and Granite-Docling models"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0.0",
+    "transformers>=4.46.3",
+    "tokenizers>=0.20.3",
+    "einops>=0.7.0",
+    "addict>=2.4.0",
+    "easydict>=1.10",
+    "docling-core>=1.0.0",
+    "Pillow>=10.0.0",
+    "click>=8.1.0",
+    "numpy>=1.24.0",
+    "vllm>=0.11.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.1.0",
+    "mypy>=1.5.0",
+    "types-Pillow>=10.0.0",
+]
+
+[project.scripts]
+deepseek-ocr = "deepseek_ocr.cli.main:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
